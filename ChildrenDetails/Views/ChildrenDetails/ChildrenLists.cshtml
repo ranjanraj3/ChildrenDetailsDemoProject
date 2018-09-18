@@ -30,7 +30,6 @@
         <ul>
             <li><a href="#tabs-1">Children Lists</a></li>
             <li><a href="#tabs-2">Children Files</a></li>
-            @*<li><a href="#tabs-3">Tab Header 3</a></li>*@
         </ul>
 
         <div id="tabs-1">
@@ -105,32 +104,6 @@
             @using (Html.BeginForm("UploadFiles", "ChildrenDetails", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
-
-                @*<div class="form-horizontal">
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                      @Html.Label("Childrens Files Upload", htmlAttributes: new { @class = "control-label col-md-2" })
-                        
-                        @ViewBag.files
-
-                        <div class="col-md-10">
-
-                            @Html.TextBox("Files", "", (String)ViewBag.files, new { @type = "file", @multiple = "multiple" })
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Upload" class="btn btn-primary" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10 text-success">
-                            @ViewBag.UploadStatus
-                        </div>
-                    </div>
-
-                </div>*@
 
                 @Html.Label("Childrens Files Upload", htmlAttributes: new { @class = "control-label col-md-2" })
 
