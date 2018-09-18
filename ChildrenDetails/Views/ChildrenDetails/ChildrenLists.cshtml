@@ -1,0 +1,144 @@
+﻿@model IEnumerable<ChildrenDetails.Models.ChildrenDetail>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChildrenLists</title>
+</head>
+<body>
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/scripts/jquery-ui-1.12.1.min.js"></script>
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>  
+
+
+    <script type="text/javascript">
+        $(function () { $("#tabs").tabs(); });
+    </script>
+
+    <div id="tabs">
+
+        <ul>
+            <li><a href="#tabs-1">Children Lists</a></li>
+            <li><a href="#tabs-2">Children Files</a></li>
+            @*<li><a href="#tabs-3">Tab Header 3</a></li>*@
+        </ul>
+
+        <div id="tabs-1">
+            @using (Html.BeginForm())
+            {
+                <div id="tabs-1">
+
+                    <h2>Children Datils Lists</h2>
+                    <hr />
+
+                    <p>
+                        Find by Child First or Last Name: @Html.TextBox("SearchString")
+                        <input type="submit" value="Search" />
+                    </p>
+
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Child_First_Name)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Child_Last_Name)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Child_Birth_Date)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Contact1_Name)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Contact1_Phone)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Contact1_Email)
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Child_First_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Child_Last_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Child_Birth_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contact1_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contact1_Phone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contact1_Email)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+
+                </div>
+            }
+        </div>
+
+        <div id="tabs-2">
+            @using (Html.BeginForm("UploadFiles", "ChildrenDetails", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                @*<div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                      @Html.Label("Childrens Files Upload", htmlAttributes: new { @class = "control-label col-md-2" })
+                        
+                        @ViewBag.files
+
+                        <div class="col-md-10">
+
+                            @Html.TextBox("Files", "", (String)ViewBag.files, new { @type = "file", @multiple = "multiple" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Upload" class="btn btn-primary" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10 text-success">
+                            @ViewBag.UploadStatus
+                        </div>
+                    </div>
+
+                </div>*@
+
+                @Html.Label("Childrens Files Upload", htmlAttributes: new { @class = "control-label col-md-2" })
+
+                <input type="file" name="files" multiple />
+                <input type="submit" value="Upload" />
+            }
+            
+        </div>
+    </div>
+</body>
+</html>

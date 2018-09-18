@@ -1,0 +1,131 @@
+USE [ChildrenDetails]
+GO
+
+/****** Object:  Table [dbo].[ChildrenDetails]    Script Date: 9/14/2018 2:43:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ChildrenDetails](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Child Last Name] [nvarchar](50) NOT NULL,
+	[Child First Name] [nvarchar](50) NOT NULL,
+	[Child Gender] [nchar](10) NOT NULL,
+	[Child Birth Date] [datetime] NOT NULL,
+	[Child Status] [int] NOT NULL,
+	[Child Address] [nvarchar](100) NOT NULL,
+	[Child Type] [int] NOT NULL,
+	[Parent1 Last Name] [nvarchar](50) NOT NULL,
+	[Parent1 First Name] [nvarchar](50) NOT NULL,
+	[Parent1 Private] [nchar](10) NOT NULL,
+	[Parent1 Gender] [nchar](10) NOT NULL,
+	[Parent1 Child Relation] [nchar](10) NOT NULL,
+	[Parent1 Address] [nvarchar](100) NOT NULL,
+	[Parent1 Unit] [nvarchar](50) NOT NULL,
+	[Parent1 City] [nvarchar](50) NOT NULL,
+	[Parent1 Province] [nvarchar](50) NULL,
+	[Parent1 Postal Code] [nvarchar](50) NOT NULL,
+	[Parent1 Home Phone] [nvarchar](50) NOT NULL,
+	[Parent1 Work Phone] [nvarchar](50) NOT NULL,
+	[Parent1 Cell Phone] [nvarchar](50) NOT NULL,
+	[Parent1 Email] [nvarchar](50) NOT NULL,
+	[Parent1 Primary Email] [bit] NOT NULL,
+	[Parent1 Comments] [nvarchar](200) NOT NULL,
+	[Parent1 Special Custody] [nvarchar](200) NOT NULL,
+	[Parent2 Last Name] [nvarchar](50) NOT NULL,
+	[Parent2 First Name] [nvarchar](50) NOT NULL,
+	[Parent2 Private] [nchar](10) NOT NULL,
+	[Parent2 Gender] [nchar](10) NOT NULL,
+	[Parent2 Child Relation] [nchar](10) NOT NULL,
+	[Parent2 Address] [nvarchar](100) NOT NULL,
+	[Parent2 Unit] [nvarchar](50) NOT NULL,
+	[Parent2 City] [nvarchar](50) NOT NULL,
+	[Parent2 Province] [nvarchar](50) NULL,
+	[Parent2 Postal Code] [nvarchar](50) NOT NULL,
+	[Parent2 Home Phone] [nvarchar](50) NOT NULL,
+	[Parent2 Work Phone] [nvarchar](50) NOT NULL,
+	[Parent2 Cell Phone] [nvarchar](50) NOT NULL,
+	[Parent2 Email] [nvarchar](50) NOT NULL,
+	[Parent2 Primary Email] [bit] NOT NULL,
+	[Parent2 Comments] [nvarchar](200) NOT NULL,
+	[Parent2 Special Custody] [nvarchar](200) NOT NULL,
+	[Sibling Name] [nvarchar](100) NOT NULL,
+	[Sibling Age] [int] NOT NULL,
+	[Sibling Gender] [nchar](10) NOT NULL,
+	[Contact1 Name] [nvarchar](50) NOT NULL,
+	[Contact1 Phone] [nvarchar](50) NOT NULL,
+	[Contact1 Email] [nvarchar](50) NOT NULL,
+	[Contact1 Address] [nvarchar](100) NOT NULL,
+	[Contact1 Relationship] [nvarchar](50) NOT NULL,
+	[Contact2 Name] [nvarchar](50) NOT NULL,
+	[Contact2 Phone] [nvarchar](50) NOT NULL,
+	[Contact2 Email] [nvarchar](50) NOT NULL,
+	[Contact2 Address] [nvarchar](100) NOT NULL,
+	[Contact2 Relationship] [nvarchar](50) NOT NULL,
+	[Contact3 Name] [nvarchar](50) NOT NULL,
+	[Contact3 Phone] [nvarchar](50) NOT NULL,
+	[Contact3 Email] [nvarchar](50) NOT NULL,
+	[Contact3 Address] [nvarchar](100) NOT NULL,
+	[Contact3 Relationship] [nvarchar](50) NOT NULL,
+	[Contact4 Name] [nvarchar](50) NOT NULL,
+	[Contact4 Phone] [nvarchar](50) NOT NULL,
+	[Contact4 Email] [nvarchar](50) NOT NULL,
+	[Contact4 Address] [nvarchar](100) NOT NULL,
+	[Contact4 Relationship] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_ChildrenDetails] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+USE [ChildrenDetails]
+GO
+
+/****** Object:  Table [dbo].[ChildrenStatus]    Script Date: 9/14/2018 2:47:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ChildrenStatus](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Status Name] [nvarchar](50) NOT NULL,
+	[Status Code] [int] NOT NULL,
+ CONSTRAINT [PK_ChildrenStatus] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+USE [ChildrenDetails]
+GO
+
+/****** Object:  Table [dbo].[ChildrenType]    Script Date: 9/14/2018 2:47:12 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ChildrenType](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ChildrenType Name] [nvarchar](50) NOT NULL,
+	[ChildrenType Code] [int] NOT NULL,
+ CONSTRAINT [PK_ChildrenType] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+

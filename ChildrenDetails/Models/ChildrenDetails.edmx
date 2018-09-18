@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ChildrenDetailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ChildrenDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Child Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Child First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Child Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Child Birth Date" Type="datetime" Nullable="false" />
+          <Property Name="Child Status" Type="int" Nullable="false" />
+          <Property Name="Child Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Child Type" Type="int" Nullable="false" />
+          <Property Name="Parent1 Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Private" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent1 Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent1 Child Relation" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent1 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Parent1 Unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Province" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parent1 Postal Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Home Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Work Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Cell Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent1 Primary Email" Type="bit" Nullable="false" />
+          <Property Name="Parent1 Comments" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Parent1 Special Custody" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Parent2 Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Private" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent2 Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent2 Child Relation" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Parent2 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Parent2 Unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Province" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parent2 Postal Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Home Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Work Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Cell Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parent2 Primary Email" Type="bit" Nullable="false" />
+          <Property Name="Parent2 Comments" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Parent2 Special Custody" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Sibling Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sibling Age" Type="int" Nullable="false" />
+          <Property Name="Sibling Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Contact1 Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact1 Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact1 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact1 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contact1 Relationship" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact2 Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact2 Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact2 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact2 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contact2 Relationship" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact3 Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact3 Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact3 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact3 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contact3 Relationship" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact4 Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact4 Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact4 Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact4 Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contact4 Relationship" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenFileUpload">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="File Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Upload Date" Type="datetime" Nullable="false" />
+          <Property Name="File Content" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status Code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChildrenType Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChildrenType Code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ChildrenDetailsModelStoreContainer">
+          <EntitySet Name="ChildrenDetails" EntityType="Self.ChildrenDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenFileUpload" EntityType="Self.ChildrenFileUpload" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenStatus" EntityType="Self.ChildrenStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenType" EntityType="Self.ChildrenType" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChildrenDetailsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChildrenDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Child_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Child_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Child_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Child_Birth_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Child_Status" Type="Int32" Nullable="false" />
+          <Property Name="Child_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Child_Type" Type="Int32" Nullable="false" />
+          <Property Name="Parent1_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Private" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Child_Relation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parent1_Postal_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Home_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Work_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Cell_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Primary_Email" Type="Boolean" Nullable="false" />
+          <Property Name="Parent1_Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent1_Special_Custody" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Private" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Child_Relation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parent2_Postal_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Home_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Work_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Cell_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Primary_Email" Type="Boolean" Nullable="false" />
+          <Property Name="Parent2_Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Parent2_Special_Custody" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sibling_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sibling_Age" Type="Int32" Nullable="false" />
+          <Property Name="Sibling_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Contact1_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact1_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact1_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact1_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact1_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact2_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact2_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact2_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact2_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact2_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact3_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact3_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact3_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact3_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact3_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact4_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact4_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact4_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact4_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact4_Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenStatu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status_Code" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChildrenType_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChildrenType_Code" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ChildrenDetailsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChildrenDetails" EntityType="Self.ChildrenDetail" />
+          <EntitySet Name="ChildrenStatus" EntityType="Self.ChildrenStatu" />
+          <EntitySet Name="ChildrenTypes" EntityType="Self.ChildrenType" />
+          <EntitySet Name="ChildrenFileUploads" EntityType="ChildrenDetailsModel.ChildrenFileUpload" />
+        </EntityContainer>
+        <EntityType Name="ChildrenFileUpload">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="File_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Upload_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="File_Content" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChildrenDetailsModelStoreContainer" CdmEntityContainer="ChildrenDetailsEntities">
+          <EntitySetMapping Name="ChildrenDetails">
+            <EntityTypeMapping TypeName="ChildrenDetailsModel.ChildrenDetail">
+              <MappingFragment StoreEntitySet="ChildrenDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Child_Last_Name" ColumnName="Child Last Name" />
+                <ScalarProperty Name="Child_First_Name" ColumnName="Child First Name" />
+                <ScalarProperty Name="Child_Gender" ColumnName="Child Gender" />
+                <ScalarProperty Name="Child_Birth_Date" ColumnName="Child Birth Date" />
+                <ScalarProperty Name="Child_Status" ColumnName="Child Status" />
+                <ScalarProperty Name="Child_Address" ColumnName="Child Address" />
+                <ScalarProperty Name="Child_Type" ColumnName="Child Type" />
+                <ScalarProperty Name="Parent1_Last_Name" ColumnName="Parent1 Last Name" />
+                <ScalarProperty Name="Parent1_First_Name" ColumnName="Parent1 First Name" />
+                <ScalarProperty Name="Parent1_Private" ColumnName="Parent1 Private" />
+                <ScalarProperty Name="Parent1_Gender" ColumnName="Parent1 Gender" />
+                <ScalarProperty Name="Parent1_Child_Relation" ColumnName="Parent1 Child Relation" />
+                <ScalarProperty Name="Parent1_Address" ColumnName="Parent1 Address" />
+                <ScalarProperty Name="Parent1_Unit" ColumnName="Parent1 Unit" />
+                <ScalarProperty Name="Parent1_City" ColumnName="Parent1 City" />
+                <ScalarProperty Name="Parent1_Province" ColumnName="Parent1 Province" />
+                <ScalarProperty Name="Parent1_Postal_Code" ColumnName="Parent1 Postal Code" />
+                <ScalarProperty Name="Parent1_Home_Phone" ColumnName="Parent1 Home Phone" />
+                <ScalarProperty Name="Parent1_Work_Phone" ColumnName="Parent1 Work Phone" />
+                <ScalarProperty Name="Parent1_Cell_Phone" ColumnName="Parent1 Cell Phone" />
+                <ScalarProperty Name="Parent1_Email" ColumnName="Parent1 Email" />
+                <ScalarProperty Name="Parent1_Primary_Email" ColumnName="Parent1 Primary Email" />
+                <ScalarProperty Name="Parent1_Comments" ColumnName="Parent1 Comments" />
+                <ScalarProperty Name="Parent1_Special_Custody" ColumnName="Parent1 Special Custody" />
+                <ScalarProperty Name="Parent2_Last_Name" ColumnName="Parent2 Last Name" />
+                <ScalarProperty Name="Parent2_First_Name" ColumnName="Parent2 First Name" />
+                <ScalarProperty Name="Parent2_Private" ColumnName="Parent2 Private" />
+                <ScalarProperty Name="Parent2_Gender" ColumnName="Parent2 Gender" />
+                <ScalarProperty Name="Parent2_Child_Relation" ColumnName="Parent2 Child Relation" />
+                <ScalarProperty Name="Parent2_Address" ColumnName="Parent2 Address" />
+                <ScalarProperty Name="Parent2_Unit" ColumnName="Parent2 Unit" />
+                <ScalarProperty Name="Parent2_City" ColumnName="Parent2 City" />
+                <ScalarProperty Name="Parent2_Province" ColumnName="Parent2 Province" />
+                <ScalarProperty Name="Parent2_Postal_Code" ColumnName="Parent2 Postal Code" />
+                <ScalarProperty Name="Parent2_Home_Phone" ColumnName="Parent2 Home Phone" />
+                <ScalarProperty Name="Parent2_Work_Phone" ColumnName="Parent2 Work Phone" />
+                <ScalarProperty Name="Parent2_Cell_Phone" ColumnName="Parent2 Cell Phone" />
+                <ScalarProperty Name="Parent2_Email" ColumnName="Parent2 Email" />
+                <ScalarProperty Name="Parent2_Primary_Email" ColumnName="Parent2 Primary Email" />
+                <ScalarProperty Name="Parent2_Comments" ColumnName="Parent2 Comments" />
+                <ScalarProperty Name="Parent2_Special_Custody" ColumnName="Parent2 Special Custody" />
+                <ScalarProperty Name="Sibling_Name" ColumnName="Sibling Name" />
+                <ScalarProperty Name="Sibling_Age" ColumnName="Sibling Age" />
+                <ScalarProperty Name="Sibling_Gender" ColumnName="Sibling Gender" />
+                <ScalarProperty Name="Contact1_Name" ColumnName="Contact1 Name" />
+                <ScalarProperty Name="Contact1_Phone" ColumnName="Contact1 Phone" />
+                <ScalarProperty Name="Contact1_Email" ColumnName="Contact1 Email" />
+                <ScalarProperty Name="Contact1_Address" ColumnName="Contact1 Address" />
+                <ScalarProperty Name="Contact1_Relationship" ColumnName="Contact1 Relationship" />
+                <ScalarProperty Name="Contact2_Name" ColumnName="Contact2 Name" />
+                <ScalarProperty Name="Contact2_Phone" ColumnName="Contact2 Phone" />
+                <ScalarProperty Name="Contact2_Email" ColumnName="Contact2 Email" />
+                <ScalarProperty Name="Contact2_Address" ColumnName="Contact2 Address" />
+                <ScalarProperty Name="Contact2_Relationship" ColumnName="Contact2 Relationship" />
+                <ScalarProperty Name="Contact3_Name" ColumnName="Contact3 Name" />
+                <ScalarProperty Name="Contact3_Phone" ColumnName="Contact3 Phone" />
+                <ScalarProperty Name="Contact3_Email" ColumnName="Contact3 Email" />
+                <ScalarProperty Name="Contact3_Address" ColumnName="Contact3 Address" />
+                <ScalarProperty Name="Contact3_Relationship" ColumnName="Contact3 Relationship" />
+                <ScalarProperty Name="Contact4_Name" ColumnName="Contact4 Name" />
+                <ScalarProperty Name="Contact4_Phone" ColumnName="Contact4 Phone" />
+                <ScalarProperty Name="Contact4_Email" ColumnName="Contact4 Email" />
+                <ScalarProperty Name="Contact4_Address" ColumnName="Contact4 Address" />
+                <ScalarProperty Name="Contact4_Relationship" ColumnName="Contact4 Relationship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenStatus">
+            <EntityTypeMapping TypeName="ChildrenDetailsModel.ChildrenStatu">
+              <MappingFragment StoreEntitySet="ChildrenStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
+                <ScalarProperty Name="Status_Code" ColumnName="Status Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenTypes">
+            <EntityTypeMapping TypeName="ChildrenDetailsModel.ChildrenType">
+              <MappingFragment StoreEntitySet="ChildrenType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ChildrenType_Name" ColumnName="ChildrenType Name" />
+                <ScalarProperty Name="ChildrenType_Code" ColumnName="ChildrenType Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenFileUploads">
+            <EntityTypeMapping TypeName="ChildrenDetailsModel.ChildrenFileUpload">
+              <MappingFragment StoreEntitySet="ChildrenFileUpload">
+                <ScalarProperty Name="File_Content" ColumnName="File Content" />
+                <ScalarProperty Name="Upload_Date" ColumnName="Upload Date" />
+                <ScalarProperty Name="File_Name" ColumnName="File Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
